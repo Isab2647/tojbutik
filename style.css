@@ -1,26 +1,7 @@
-/* .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.cards a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  background-color: rgb(234, 90, 207);
-  padding: 2em;
-  border: 2px solid black;
-}
-
-.cards div {
-  padding-top: 8em;
-  padding-left: 6em;
-} */
-
-
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem; 
+  gap: 2rem;
   padding-top: 5em;
   padding-left: 7em;
   padding-right: 7em;
@@ -32,10 +13,10 @@
 }
 
 .cards a {
-  display: flex;              
-  justify-content: center;    
-  align-items: center;        
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: white;
-  height: 70px;              
+  height: 70px;
 }
