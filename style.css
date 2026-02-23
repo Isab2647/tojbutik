@@ -10,6 +10,7 @@
 .cards div {
   background-color: rgb(234, 90, 207);
   border: 2px solid black;
+  border-radius: 40px;
 }
 
 .cards a {
@@ -19,4 +20,32 @@
   text-decoration: none;
   color: white;
   height: 70px;
+}
+
+h1 {
+  margin-left: 3em;
+  margin-top: 3em;
+}
+
+header {
+  background-color: rgb(234, 90, 207);
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: white;
+}
+
+header p {
+  margin-left: 3em;
+}
+
+footer {
+  background-color: rgb(234, 90, 207);
+  padding-top: 2em;
+  padding-bottom: 5em;
+  margin-top: 8em;
+  color: white;
+}
+
+footer p {
+  margin-left: 3em;
 }
