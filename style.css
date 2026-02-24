@@ -8,7 +8,7 @@
 }
 
 .buttons div {
-  background-color: rgb(81, 5, 67);
+  background-color: rgb(131, 72, 120);
   border: 2px solid black;
   border-radius: 40px;
 }
@@ -20,6 +20,10 @@
   text-decoration: none;
   color: rgb(255, 255, 255);
   height: 70px;
+}
+
+.buttons div:hover  {
+  background-color: rgb(232, 140, 203);
 }
 
 h1,
@@ -144,7 +148,6 @@ dd {
 .dropdown {
   position: relative;
   list-style: none;
-  
 }
 
 /* Skjul menuen */
@@ -157,7 +160,6 @@ dd {
   background: white;
   padding: 1rem;
   margin: 0;
-  
 }
 
 /* Vis når dropdown har fokus */
@@ -165,7 +167,7 @@ dd {
   display: block;
 }
 
-.boks{
+.boks {
   background-color: rgb(125, 90, 122);
   padding-left: 2em;
   padding-bottom: 7em;
