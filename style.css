@@ -22,7 +22,7 @@
   height: 70px;
 }
 
-.buttons div:hover  {
+.buttons div:hover {
   background-color: rgb(97, 18, 70);
 }
 
@@ -78,6 +78,11 @@ footer p {
   padding: 1em;
 }
 
+.product_list_container a {
+  text-decoration: none;
+  color: black;
+}
+
 li {
   list-style: none;
 }
@@ -111,6 +116,7 @@ li {
   padding: 2em;
   opacity: 70%;
   bottom: 413.5px;
+  right: 12.8em;
 }
 
 .grid_1-1-1 {
