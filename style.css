@@ -8,7 +8,7 @@
 }
 
 .buttons div {
-  background-color: rgb(131, 72, 120);
+  background-color: rgb(200, 128, 187);
   border: 2px solid black;
   border-radius: 40px;
 }
@@ -23,7 +23,7 @@
 }
 
 .buttons div:hover  {
-  background-color: rgb(232, 140, 203);
+  background-color: rgb(97, 18, 70);
 }
 
 h1,
