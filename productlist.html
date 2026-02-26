@@ -8,54 +8,82 @@
   </head>
   <body>
     <header>
-      <p><a href="index.html">FashionRUs</a></p>
+      <a href="index.html">FashionRUs</a>
+      <a href="productlist.html">Produkter</a>
     </header>
     <main>
       <h2>Produkter</h2>
 
-      <div class="product_list_container">
-        <div>
-          <a href="product.html"><img src="imgs/bluse.jpg" alt="" /></a>
-          <li>
-            <p><strong>Lyserød bluse til pige</strong></p>
-            <p class="opacity">Bluse / Pige</p>
-            <p>DKK 299,-</p>
-            <a href="product.html">Læs mere</a>
-          </li>
-        </div>
-        <div class="udsalg_produkt">
-          <a href="product.html"> <img src="imgs/bukser.jpg" alt="" /></a>
-          <li>
-            <p><strong>Denim bukser - Herre</strong></p>
-            <p class="opacity">Bukser / Herre</p>
-            <p>Før DKK 549,-</p>
-            <p>Nu DKK 349,-</p>
-            <a href="product.html">Læs mere</a>
-            <span class="udsalg">-36%</span>
-          </li>
-        </div>
-        <div class="vare_udsolgt">
-          <a class="opacity" href="product.html"> <img src="imgs/jakke.jpg" alt="" /></a>
-          <li>
-            <p><strong>Jakke</strong></p>
-            <p class="opacity">Jakke / Dame</p>
-            <p>DKK 799,-</p>
-            <a href="product.html">Læs mere</a>
-            <span class="udsolgt">Udsolgt</span>
-          </li>
-        </div>
-        <div class="udsalg_produkt vare_udsolgt">
-          <a class="opacity" href="product.html"> <img src="imgs/sko.jpg" alt="" /></a>
-          <li>
-            <p><strong>New Balance sko </strong></p>
-            <p class="opacity">Sko</p>
-            <p>Før DKK 1299,-</p>
-            <p>Nu DKK 999,-</p>
-            <a href="product.html">Læs mere</a>
-            <span class="udsalg">-23%</span>
-            <span class="udsolgt">Udsolgt</span>
-          </li>
-        </div>
+      <div class="product_list_container productlist">
+        <article class="smallProduct">
+          <a href="product.html"
+            ><img src="https://kea-alt-del.dk/t7/images/webp/640/9971.webp" alt="Produkt billede"
+          /></a>
+
+          <p class="soldoutTxt color_me_black_and_red">SOLD OUT</p>
+
+          <h3><strong>Nike sweatshirt</strong></h3>
+          <p class="opacity">Sweatshirt | Herre</p>
+          <p class="price">DKK <span>299</span>,-</p>
+          <div class="discounted_element">
+            <p>Nu DKK <span></span>,-</p>
+            <p class="color_me_red"><span></span>%</p>
+          </div>
+          <a href="product.html">Læs mere</a>
+        </article>
+
+        <article class="smallProduct discounted ">
+          <a href="product.html"
+            ><img src="https://kea-alt-del.dk/t7/images/webp/640/26145.webp" alt="Produkt billede"
+          /></a>
+
+          <p class="soldoutTxt color_me_black_and_red">SOLD OUT</p>
+
+          <h3><strong>Bukser - Herre</strong></h3>
+          <p class="opacity">Bukser | Herre</p>
+          <p class="price">DKK <span>549</span>,-</p>
+          <div class="discounted_element">
+            <p>Nu DKK <span>349</span>,-</p>
+            <p class="color_me_red"><span>-36</span>%</p>
+          </div>
+          <a href="product.html">Læs mere</a>
+        </article>
+
+
+        <article class="smallProduct soldOut">
+          <a href="product.html"
+            ><img src="https://kea-alt-del.dk/t7/images/webp/640/2621.webp" alt="Produkt billede"/></a>
+
+          <p class="soldoutTxt color_me_black_and_red">SOLD OUT</p>
+
+          <h3><strong>T-shirt - Herre</strong></h3>
+          <p class="opacity">T-shirt | Herre</p>
+          <p class="price">DKK <span>799</span>,-</p>
+          <div class="discounted_element">
+            <p>Nu DKK <span></span>,-</p>
+            <p class="color_me_red"><span></span>%</p>
+          </div>
+          <a href="product.html">Læs mere</a>
+        </article>
+
+
+         <article class="smallProduct discounted soldOut">
+          <a href="product.html"
+            ><img src="https://kea-alt-del.dk/t7/images/webp/640/2613.webp" alt="Produkt billede"/></a>
+
+          <p class="soldoutTxt color_me_black_and_red">SOLD OUT</p>
+
+          <h3><strong>Sandaler </strong></h3>
+          <p class="opacity">Sko</p>
+          <p class="price">DKK <span>1299</span>,-</p>
+          <div class="discounted_element">
+            <p>Nu DKK <span>999</span>,-</p>
+            <p class="color_me_red"><span>-23</span>%</p>
+          </div>
+          <a href="product.html">Læs mere</a>
+        </article>
+
+        
       </div>
     </main>
     <footer>

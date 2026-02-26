@@ -1,3 +1,4 @@
+/* forside */
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -8,7 +9,7 @@
 }
 
 .buttons div {
-  background-color: rgb(200, 128, 187);
+  background-color: rgb(239, 117, 217);
   border: 2px solid black;
   border-radius: 40px;
 }
@@ -33,9 +34,12 @@ h2 {
 }
 
 header {
-  background-color: rgb(234, 90, 207);
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(240, 149, 224);
   padding-top: 2em;
   padding-bottom: 2em;
+  padding-right: 2em;
   color: white;
 }
 
@@ -49,7 +53,7 @@ header {
 }
 
 footer {
-  background-color: rgb(234, 90, 207);
+  background-color: rgb(240, 149, 224);
   padding-top: 2em;
   padding-bottom: 5em;
   margin-top: 8em;
@@ -59,6 +63,8 @@ footer {
 footer p {
   margin-left: 3em;
 }
+
+/* produktliste */
 
 .product_list_container img {
   max-width: 100%;
@@ -73,7 +79,7 @@ footer p {
   margin: 2em 2em 0 2em;
 }
 
-.product_list_container div {
+.product_list_container article {
   border: 2px solid black;
   padding: 1em;
 }
@@ -83,40 +89,9 @@ footer p {
   color: black;
 }
 
-li {
-  list-style: none;
-}
 
 .opacity {
   opacity: 50%;
-}
-
-.udsalg_produkt {
-  position: relative;
-}
-
-.udsalg {
-  position: absolute;
-  left: 230px;
-  bottom: 62px;
-  background-color: red;
-  color: white;
-  padding: 0.5em 0.8em;
-  border-radius: 8px;
-}
-
-.vare_udsolgt {
-  position: relative;
-}
-
-.udsolgt {
-  position: absolute;
-  background-color: rgb(55, 55, 55);
-  color: white;
-  padding: 2em;
-  opacity: 70%;
-  bottom: 413.5px;
-  right: 12.8em;
 }
 
 .grid_1-1-1 {
@@ -146,36 +121,149 @@ dd {
   margin: auto;
 }
 
+  .productlist article {
+    position: relative;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 7;
+    gap: 0;
+  }
+
+  .productlist article h3 {
+    font-size: 1rem;
+  }
+
+  .productlist article > * {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .productlist .discounted_element p,
+  .productlist .discounted .soldOut .discounted_element p {
+    display: none;
+  }
+
+  .productlist .discounted .discounted_element {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.productlist .discounted .discounted_element p {
+      display: block;
+    }
+
+  .productlist .discounted .price {
+    text-decoration: line-through;
+  }
+
+  .productlist .color_me_red {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 0.5em 0.8em;
+    border-radius: 8px;
+  }
+
+  .color_me_black_and_red {
+    background-color: rgb(55, 55, 55);
+    color: rgb(255, 255, 255);
+    padding: 2em;
+    opacity: 70%;
+  }
+
+  .productlist .soldoutTxt {
+    display: none;
+  }
+  .productlist .soldOut .soldoutTxt {
+    display: block;
+    position: absolute;
+    z-index: 100;
+  
+  }
+
+  .productlist .soldOut::after {
+    content: "";
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.442);
+    border: 0.1px solid lightgray;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  /* produkt */
+
 .information {
   padding-left: 8em;
   padding-top: 7em;
 }
 
-.dropdown {
-  position: relative;
-  list-style: none;
+.boks {
+  border: 5px solid  rgb(240, 149, 224);
+  background-color: rgb(249, 238, 247);
+  padding-left: 2em;
+  padding-bottom: 7em;
+  margin-right: 15em;
+  margin-top: 5em;
 }
 
-/* Skjul menuen */
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+
 .dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  list-style: none;
   background: white;
-  padding: 1rem;
+  list-style: none;
+  padding: 0;
   margin: 0;
+  border: 1px solid #ccc;
+  min-width: 90px;
 }
 
-/* Vis når dropdown har fokus */
+/* Vis når man klikker */
 .dropdown:focus-within .dropdown-content {
   display: block;
 }
 
-.boks {
-  background-color: rgb(125, 90, 122);
-  padding-left: 2em;
-  padding-bottom: 7em;
-  padding-right: 0;
+.dropdown-content li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content li a:hover {
+  background: #f2f2f2;
+}
+
+.dropdown {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(63, 20, 58);
+  padding: 0.5em;
+  margin-right: 6em;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+}
+
+.dropdown input {
+  display: none;
+}
+.dropdown input:checked ~ .dropdown-content {
+  display: block;
+}
+
+.dropdown label {
+  cursor: pointer;
 }
