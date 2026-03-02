@@ -1,33 +1,26 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tøjbutik</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="js/product.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <a href="index.html">FashionRUs</a>
-      <a href="productlist.html">Produkter</a>
-    </header>
-    <main id="productContainer">
-      <div class="grid_1-1-1">
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const productContainer = document.querySelector("#productContainer");
+
+fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
+  .then((response) => response.json())
+  .then((data) => {
+    productContainer.innerHTML = `
+<div class="grid_1-1-1">
         <div class="information">
           <h2 class="h2">Produkt information</h2>
           <dl>
             <dt><strong>Model navn</strong></dt>
-            <dd>Levi's Denim bukser</dd>
+            <dd>${data.articletype}</dd>
             <dt><strong>Farve</strong></dt>
-            <dd>Grå</dd>
+            <dd>${data.basecolour}</dd>
             <dt><strong>Produktnummer</strong></dt>
             <dd>26145</dd>
             <dt><strong>Pris</strong></dt>
-            <dd></dd>
+            <dd>${data.price}</dd>
           </dl>
         </div>
-        <img class="order" src="https://kea-alt-del.dk/t7/images/webp/640/26145.webp" alt="" />
+        <img class="order" src="https://kea-alt-del.dk/t7/images/webp/640/${id}.webp" alt="" />
 
         <div class="boks">
           <h3>Levi's bukser - herre</h3>
@@ -45,10 +38,7 @@
             </li>
           </ul>
         </div>
-      </div>
-    </main>
-    <footer>
-      <p>FashionRUs</p>
-    </footer>
-  </body>
-</html>
+      </div>`;
+  });
+
+
