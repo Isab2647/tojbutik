@@ -17,7 +17,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
             <dt><strong>Produktnummer</strong></dt>
             <dd>26145</dd>
             <dt><strong>Pris</strong></dt>
-            <dd>${data.price}</dd>
+            <dd>${data.price} ,-</dd>
           </dl>
         </div>
         <img class="order" src="https://kea-alt-del.dk/t7/images/webp/640/${id}.webp" alt="" />
