@@ -11,9 +11,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}&limit=100`)
     function showProducts(productsArr) {
       productContainer.innerHTML = `<h2>${category}</h2>`;
       productsArr.forEach((product) => {
-        // console.log("product", product.id);
-
-        productContainer.innerHTML += `<article class="smallProduct discounted soldOut">
+        productContainer.innerHTML += `<article class="smallProduct ${product.soldout ? "soldOut" : ""} ${product.discount ? "discounted" : ""}">
         
           <a href="product.html?id=${product.id}"
             ><img
@@ -27,7 +25,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}&limit=100`)
           <p class="opacity">${product.articletype} | ${product.brandname}</p>
           <p class="price">DKK <span>${product.price}</span>,-</p>
           <div class="discounted_element">
-            <p>Nu DKK <span>${Math.round(product.price * (1 - product.discount / 100))}</span>,-</p>
+            <p>Nu DKK <span>${Math.ceil(product.price * (1 - product.discount / 100))}</span>,-</p>
             <p class="color_me_red"><span>${product.discount}</span>%</p>
           </div>
           <a href="product.html?id=${product.id}">Læs mere</a>

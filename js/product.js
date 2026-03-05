@@ -6,7 +6,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
   .then((response) => response.json())
   .then((data) => {
     productContainer.innerHTML = `
-<div class="grid_1-1-1">
+<div class="grid_1-1-1"> 
         <div class="information">
           <h2 class="h2">Produkt information</h2>
           <dl>
@@ -17,10 +17,15 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
             <dt><strong>Produktnummer</strong></dt>
             <dd>26145</dd>
             <dt><strong>Pris</strong></dt>
-            <dd>${data.price} ,-</dd>
+            <p class="price">DKK <span>${data.price}</span>,-</p>
+            <p class="price">DKK ${Math.ceil(data.price * (1 - data.discount / 100))} ,-</p>
           </dl>
+          ${data.discount ? "  <span class='saleLabel' >Udsalg!</span> " : ""}
+         
         </div>
-        <img class="order" src="https://kea-alt-del.dk/t7/images/webp/640/${id}.webp" alt="" />
+      
+       <img class="order" src="https://kea-alt-del.dk/t7/images/webp/640/${id}.webp" alt="" />
+
 
         <div class="boks">
           <h3>Levi's bukser - herre</h3>
@@ -36,9 +41,9 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
                 <li><a href="#">L</a></li>
               </ul>
             </li>
-          </ul>
+          </ul> 
+         
+          <button class="kob">Køb</button>
         </div>
       </div>`;
   });
-
-
